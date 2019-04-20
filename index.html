@@ -1,468 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<head>
+	<title>ariefzzz.github.io</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="bg-g1 size1 flex-w flex-col-c-sb p-l-15 p-r-15 p-t-55 p-b-35 respon1">
+		<span></span>
+		<div class="flex-col-c p-t-50 p-b-50">
+			<h3 class="l1-txt1 txt-center p-b-10">
+				Coming Soon
+			</h3>
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body class="homepage">
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href=".">My Docs</a>
-                </div>
-
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#tutorial-crawler-menggunakan-scrapy-dan-clushtering-dokumen-menggunakan-k-mean">Tutorial crawler menggunakan scrapy dan clushtering dokumen menggunakan k-mean</a></li>
-            <li><a href="#1-scrapy">1. scrapy</a></li>
-            <li><a href="#11-pemasangan-scrapy">1.1 pemasangan scrapy</a></li>
-            <li><a href="#12-membuat-project-scrapy">1.2 membuat project scrapy</a></li>
-            <li><a href="#13-mengatur-domain">1.3 mengatur domain</a></li>
-            <li><a href="#14-mengatur-startpage">1.4 mengatur startPage</a></li>
-            <li><a href="#15-mengatur-rules">1.5 mengatur rules</a></li>
-            <li><a href="#16-mengatur-data-yang-akan-diambil">1.6 mengatur data yang akan diambil</a></li>
-            <li><a href="#17-crawl-data">1.7 crawl data</a></li>
-            <li><a href="#2-migrasi-csv-ke-sqlite">2. migrasi csv ke sqlite</a></li>
-            <li><a href="#3-clushtering-data">3. clushtering data</a></li>
-            <li><a href="#31-koneksi-database">3.1 koneksi database</a></li>
-            <li><a href="#32-menjadikan-data-terstruktur">3.2 menjadikan data  terstruktur</a></li>
-            <li><a href="#33-vsm">3.3 vsm</a></li>
-            <li><a href="#34-kmean">3.4 kmean</a></li>
-    </ul>
-</div></div>
-                <div class="col-md-9" role="main">
-
-<h1 id="tutorial-crawler-menggunakan-scrapy-dan-clushtering-dokumen-menggunakan-k-mean"><strong>Tutorial crawler menggunakan scrapy dan clushtering dokumen menggunakan k-mean</strong></h1>
-<h2 id="1-scrapy"><strong>1. scrapy</strong></h2>
-<blockquote>
-<p>scrapy menurut <a href="https://en.wikipedia.org/wiki/Scrapy">wikipedia</a> Scrapy (/ˈskreɪpi/ skray-pee) adalah framework gratis dan opensource python yang di desain untuk <em>web scrapping</em> dan juga bisa digunakan untuk mengekstrak data menggunakan API maupun seperti web crawler lain pada umumnya , saat ini scrapy dikelola oleh Scrapinghub Ltd.</p>
-</blockquote>
-<h2 id="11-pemasangan-scrapy">1.1 pemasangan scrapy</h2>
-<p>pastikan sudah memasang <a href="https://www.python.org/">python</a> versi terbaru dan melakukan centang pada pip </p>
-<p><img alt="gambar 1" src="D:\kampus\semester 8\penambangan web\tutorialCrawler\gambar\gambar 1.PNG" /></p>
-<p>agar bisa menggunakan perintah pip di cmd</p>
-<p>setelah memasang python , maka install scrapy mengggunakan perintah <code>pip install scrapy</code></p>
-<p>jika gagal menginstall scrapy silahkan install terlebih dahulu yang diminta scrapy bisa saja .net framework ataupun visual studio 14 tergantung keadaan komputer masing masing </p>
-<h2 id="12-membuat-project-scrapy">1.2 membuat project scrapy</h2>
-<p>membuat project scrapy pertama buka folder tempat kita akan membuat project , disana tekan shift+klikKanan kemudian pilih  <strong>open command window here</strong> maka  akan muncul cmd dan ketik disana <code>scrapy startproject olx</code> seperti berikut</p>
-<p><img alt="1555651284646" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555651284646.png" /></p>
-<p>maka akan tergenerate project scrapy seperti berikut <img alt="1555651471600" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555651471600.png" /></p>
-<p>setelah itu gunakan perintah <code>cd tugasAkhir</code> untuk berpindah directory ke tugasAkhir dan jalankan perintah berikut untuk membuat crawlernya <code>scrapy genspider tugasAkhir pta.trunojoyo.ac.id</code> </p>
-<h2 id="13-mengatur-domain">1.3 mengatur domain</h2>
-<p>domain digunakan untuk membatasi lingkup situs yang dijelajahi oleh crawler ,</p>
-<p>buka file <strong>tugasAkhir.py</strong> yang berada di folder spiders lalu atur <code>allowed_domains = ['pta.trunojoyo.ac.id']</code> untuk membatasi link yang dijelajahi crawler tetap berada di domain <code>pta.trunojoyo.ac.id</code></p>
-<h2 id="14-mengatur-startpage">1.4 mengatur startPage</h2>
-<p>startpage berguna memberi tahu  crawler link awal tempat dia mulai menjelajah seperti berikut <code>start_urls = ['https://pta.trunojoyo.ac.id/welcome/index/4']</code> isi di dalam list bisa lebih dari 1 link , saya mulai melakukan crawl mulai halaman 4 karena halaman 1-3 strukturnya berbeda dengan halaman 4-seterusnya sehingga agar mudah saya crawl mulai halaman 4 </p>
-<h2 id="15-mengatur-rules">1.5 mengatur rules</h2>
-<p>tambahkan rule berikut di baris setelah startUrl</p>
-<pre><code class="python">rules = (
- Rule(LinkExtractor(allow=(), restrict_xpaths=('//*[@id=&quot;end&quot;]/ol/li[8]/a',)),callback=&quot;parse_item&quot;,follow=True),)
-</code></pre>
-
-<p>rule ini bisa diartikan untuk link di alamat xpath <code>'//*[@id="end"]/ol/li[8]/a'</code> di parse ke fungsi parse_item , dan <code>follow=True</code> berarti di dalam halaman link tadi jika ada alamat xpath <code>'//*[@id="end"]/ol/li[8]/a'</code> maka jelajahi juga sampai alamat xpath tersebut tidak exist</p>
-<p>xpath bisa dicopy melalui inspect element</p>
-<p>untuk mengenal lebih dalam xpath anda bisa membaca beberapa artikel berikut:</p>
-<ul>
-<li>https://medium.com/@achmadsyah/tentang-aku-kamu-xpath-f15f67b98733</li>
-<li>https://id.wikipedia.org/wiki/XPath</li>
-</ul>
-<h2 id="16-mengatur-data-yang-akan-diambil">1.6 mengatur data yang akan diambil</h2>
-<p>setelah rule mengatur tombol mana yang mengarah ke pagging berikutnya maka link content tiap pagging harus di extract  , disini saya mengextraknya berdasarkan css <code>'a.gray.button::attr(href)'</code>  digambar berikut bisa dilihat css yang menuju halaman detail</p>
-<p><img alt="1555660038677" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555660038677.png" /></p>
-<p>css tadi di extract di method parse_item kemudian tiap link yang didapat di parse ke method <code>parse_detail_page</code></p>
-<pre><code class="python">def parse_item(self, response):
-        print('Processing..' + response.url)
-
-        item_links = response.css('a.gray.button::attr(href)').extract()
-        # print(item_links)
-        for a in item_links:
-            print(&quot;membaca artikel .... &quot;+a)
-            yield scrapy.Request(a, callback=self.parse_detail_page)
-</code></pre>
-
-<p>setelah link menuju halaman detail di parse maka berikutnya adalah mengextract data yang ingin diambil melalui method <code>parse_detail_page</code>  , </p>
-<p>cara mengextract judul penulis sebenarnya sama saja menggunakan css maupun xpath , tapi direkomendaskan menggunakan css jika struktur web tersebut mendukung css yang tertata , sedangkan imbuhan <code>.extract()[0]</code> digunakan untuk ambil data didalamnya karena return dari <code>response.css()</code> maupun <code>response.xpath()</code> adalah list, </p>
-<p>jika ingin berexperiment dengan xpath ataupun css agar data yang diambil sesuai keinginan maka gunakan perintah <code>scrapy shell https://pta.trunojoyo.ac.id/welcome/index/4</code> di cmd dan uji xpath atau  css kalian dengan perintah <code>response.css()</code> ataupun <code>response.xpath()</code> jika data yang ditampilkan sesuai maka gunakan xpath ataupun css tersebut</p>
-<p>di method ini selain mengekstrack data juga pembersihan data ,beberapa data memilikikata yang tidak ingin saya ambil seperti <strong>Penulis : nama</strong> sedangkan yang ingin saya ambil hanya <strong>nama</strong> saja maka saya melakukan replace di variable penulis</p>
-<p>kemudian item adalah data yang akan kita simpan ke csv atributnya apa saja tinggal kita sesuaikan</p>
-<pre><code class="python"> def parse_detail_page(self, response):
-        judul = response.css('a.title::text').extract()[0].strip()
-        penulis = response.xpath('//*[@id=&quot;content_journal&quot;]/ul/li/div[2]/div[1]/span/text()').extract()[0]
-        abstrak = response.xpath('//*[@id=&quot;content_journal&quot;]/ul/li/div[4]/div[2]/p/text()').extract()[0]
-        url = response.url
-
-        penulis = penulis.replace('Penulis : ', ''
-
-        item = ItemTugasAkhir()
-        item['judul'] = judul
-        item['penulis'] = penulis
-        item['abstrak'] = abstrak
-        item['url'] = url
-        yield item
-</code></pre>
-
-<p>jangan lupa juga meng edit <strong>items.py</strong> agar field yang di parse oleh <code>parse_detail_page</code> sesuai dengan parameter di  <code>ItemTugasAkhir()</code> </p>
-<pre><code class="python">import scrapy
+			<p class="txt-center l1-txt2 p-b-60">
+				Our website is under construction
+			</p>
 
 
-class PtatrunojoyoItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+			
+		</div>
 
-class ItemTugasAkhir(scrapy.Item):
-    # define the fields for your item here like:
-    judul = scrapy.Field()
-    penulis = scrapy.Field()
-    abstrak = scrapy.Field()
-    url = scrapy.Field()
-</code></pre>
+		<span class="s1-txt3 txt-center">
+			@ 2017 Coming Soon Template. Designed by Colorlib
+		</span>
+		
+	</div>
 
-<h2 id="17-crawl-data">1.7 crawl data</h2>
-<p>untuk crawling data bisa menggunakan perintah <code>scrapy crawl --nolog TugasAkhir -o data.csv -t csv</code>  data hasil crawling akan disimpan di data.csv</p>
-<p>proses crawling seperti berikut tunggu hingga selesai</p>
-<p><img alt="1555664423165" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555664423165.png" /></p>
-<p>setelah selesai data akan menjadi seperti berikut :</p>
-<p><img alt="1555674935243" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555674935243.png" /></p>
-<h2 id="2-migrasi-csv-ke-sqlite">2. migrasi csv ke sqlite</h2>
-<p>saya menggunakan tools <a href="https://sqlitebrowser.org/">db browser for sqlite</a> disini sangat mudah  klik new database ketika muncul  pop up untuk mengisi field apa saja yang ada di db close saja </p>
-<p><img alt="1555675137009" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555675137009.png" /></p>
-<p>setelah itu di menu file pilih import table form csv lali pilih file csv tadi dan lakukan proses migrasi</p>
-<p><img alt="1555675466884" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555675466884.png" /></p>
-<p>tunggu hingga proses selesai </p>
-<p><img alt="1555675509234" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555675509234.png" /></p>
-<h2 id="3-clushtering-data">3. clushtering data</h2>
-<p>dalam step ini diasumsikan data telah menjadi sqlite dengan struktur seperti ini</p>
-<p><img alt="1555681519832" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555681519832.png" /></p>
-<h2 id="31-koneksi-database">3.1 koneksi database</h2>
-<p>saya menggunakan library sqlite3 untuk melakukan koneksi dengan db , code untuk melakukan koneksi sebagai berikut</p>
-<pre><code class="python">import sqlite3 
-def koneksi(db_file):
-    try:
-        conn = sqlite3.connect(db_file)
-        return conn
-    except Error as e:
-        print(e)
-    return None
+	<!-- Modal Login -->
+	<div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document" data-dismiss="modal">
+			<div class="modal-subscribe where1-parent bg0 bor2 size4 p-t-54 p-b-100 p-l-15 p-r-15">
+				<button class="btn-close-modal how-btn2 fs-26 where1 trans-04">
+					<i class="zmdi zmdi-close"></i>
+				</button>
 
-database = &quot;data DUMMY.sqlite&quot;
-#pastikan nama file database benar dan berada 1 directory dengan file python
-conn = koneksi(database)
-</code></pre>
+				<div class="wsize1 m-lr-auto">
+					<h3 class="m1-txt1 txt-center p-b-36">
+						<span class="bor1 p-b-6">Subscribe</span>
+					</h3>
 
-<h2 id="32-menjadikan-data-terstruktur">3.2 menjadikan data  terstruktur</h2>
-<p>field yang akan diolah adalah field  deskripsi , untuk merubahnya menjadi data terstruktur ada beberapa step yang harus dilakukan yaitu :</p>
-<ul>
-<li>lowercase </li>
-<li>stopword</li>
-<li>stemming</li>
-<li>tokenisasi</li>
-</ul>
-<p>seperti contoh program berikut :</p>
-<pre><code class="python">def keDataTerstruktur(text):
-    text = lowerCase(text)
-    text = stopword(text)
-    text = stemming(text)
-    text = tokenisasi(text)
-    return text 
-</code></pre>
+					<p class="m1-txt2 txt-center p-b-40">
+						Follow us for update now!
+					</p>
 
-<p>adapun isi dari masing-masing fungsi dan penjelasnnya  sebagai berikut :</p>
-<pre><code class="python">def lowerCase(text):
-    text = text.lower()
-    #mengubah keseluruhan text menjadi lowercase
-    return text
-def stopword(text):
-    # Ambil Stopword bawaan
-    stop_factory = StopWordRemoverFactory().get_stop_words()
-    print(stop_factory)
-    more_stopword = ['diatur', 'perjodohan']
+					<form class="contact100-form validate-form">
+						<div class="wrap-input100 m-b-10 validate-input" data-validate = "Name is required">
+							<input class="s1-txt4 placeholder0 input100" type="text" name="name" placeholder="Name">
+							<span class="focus-input100"></span>
+						</div>
 
-    # Merge / menggabungkan stopword bawaan dan tambahan
-    data = stop_factory + more_stopword
+						<div class="wrap-input100 m-b-20 validate-input" data-validate = "Email is required: ex@abc.xyz">
+							<input class="s1-txt4 placeholder0 input100" type="text" name="email" placeholder="Email">
+							<span class="focus-input100"></span>
+						</div>
 
-    dictionary = ArrayDictionary(data)
-    str = StopWordRemover(dictionary)
+						<div class="w-full">
+							<button class="flex-c-m s1-txt2 size5 how-btn1 trans-04">
+								Get Updates
+							</button>
+						</div>
+					</form>
 
-    hasil = str.remove(text)
-    # print(hasil)
+					<p class="s1-txt5 txt-center wsize2 m-lr-auto p-t-20">
+						And don’t worry, we hate spam too! You can unsubcribe at anytime.
+					</p>
+				</div>
+			</div>
 
-    return hasil
-def stemming(text):
-    # create stemmer
-    factory = StemmerFactory()
-    stemmer = factory.create_stemmer()
-    #melakukan stemming , atau mengubah kata menjadi kata dasar
-    hasil = stemmer.stem(text)
-    return hasil
-def tokenisasi(text):
+		</div>
+	</div>
 
-    #memecah kata berdasarkan spasi
-    text = text.split()
-    return text
+	
 
-</code></pre>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/moment.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		$('.cd100').countdown100({
+			// Set Endtime here
+			// Endtime must be > current time
+			endtimeYear: 0,
+			endtimeMonth: 0,
+			endtimeDate: 35,
+			endtimeHours: 18,
+			endtimeMinutes: 0,
+			endtimeSeconds: 0,
+			timeZone: "" 
+			// ex:  timeZone: "America/New_York", can be empty
+			// go to " http://momentjs.com/timezone/ " to get timezone
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 
-<p>setelah membuat code yang mengubah suatu text menjadi data terstruktur  sekarang adalah cara mengambi data dari database dan memasukkannya ke dalam fungsi <code>def keDataTerstruktur(text)</code> tadi , dengan menggunakan koneksi <code>conn</code> yang telah ada kita ambil datanya dengan menggunakan code</p>
-<pre><code class="python">def prosesDataTerstruktur(conn):
-    cur = conn.cursor()
-    #execute query select
-    cur.execute(&quot;SELECT * FROM data&quot;)
-    rows = cur.fetchall()
-    print(&quot;prosesDataTerstruktur&quot;, end=&quot;&quot;, flush=True)
-    for row in rows:
-        #mengakses variable daftaKata
-        global daftarKata
-        #row[0] atau deskripsi di parse ke fungsi keDataTerstruktur()
-        text = keDataTerstruktur(row[0])
-        #mengumpulkan kata dari semua dokumen digunakan nanti di vsm
-        daftarKata = daftarKata.union(set(text))
-
-        text = ' '.join(text)
-        #proses menyimpan row[3] adalah nim yang dijadikan primary key
-        simpanDataTerstruktur(conn , text ,row[3])
-
-        print(&quot;. &quot;, end=&quot;&quot;, flush=True)
-    print(&quot;done&quot;)
-</code></pre>
-
-<p>data yang telah menjadi terstruktur akan disimpann di database mennggunakan kode berikut:</p>
-<pre><code class="python">#memastikan field dataTerstruktur ada dalam database
-def cekKolomDataTerstruktur(conn):
-    cur = conn.cursor()
-    cur.execute(&quot;PRAGMA table_info(data);&quot;)
-    rows = cur.fetchall()
-    for row in rows:
-        # print(row[1])
-        if row[1] =='dataTerstruktur':
-            return True
-            end
-    cur.execute(&quot;ALTER TABLE data ADD COLUMN dataTerstruktur TEXT;&quot;)
-    return False
-def simpanDataTerstruktur(conn , text , url):
-    task = (str(text) , str(url))
-    sql = &quot;UPDATE data SET dataTerstruktur = ? WHERE url = ?&quot;
-    cur = conn.cursor()
-    cur.execute(sql,task)
-    return cur.lastrowid
-</code></pre>
-
-<p>maka file database setelah dilakukan proses ini akan menjadi </p>
-<p><img alt="1555745362681" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555745362681.png" /></p>
-<h2 id="33-vsm">3.3 vsm</h2>
-<p>setelah menjalankan method <code>def prosesDataTerstruktur(conn):</code> maka variable globa <code>daftarKata</code> akan berisi seluruh kata (yang telah menjadi data terstruktur) dari seluruh dokumen yang ada di database maka proses vsm adalah menghitung berapa banyak masing masing kata terkandung di dalam dokumen , metode untuk menghitung berapa jumlah kata di sebuah text sebagai berikut</p>
-<pre><code class="python">def keVsm(text):
-    global daftarKata
-    text = text.split()
-    tmp = []
-
-    #melakukan perulangan sepanjang 'daftarKata' untukmenghitung masing masing kata ada berapa pada 'text'
-    for kata in daftarKata:
-        jumlahKata = text.count(kata)
-        tmp = tmp+[jumlahKata]
-
-    print('panjang vsm = ', len(tmp))
-    return tmp
-</code></pre>
-
-<p>berikutnya hanya perlu mengambil data terstruktur di database dan parse ke method  <code>def keVsm(text):</code></p>
-<pre><code class="python">def prosesVsm (conn):
-    cur = conn.cursor()
-    cur.execute(&quot;SELECT * FROM data&quot;)
-    rows = cur.fetchall()
-    print(&quot;prosesVsm&quot;, end=&quot;&quot;, flush=True)
-    for row in rows:
-        #row[4] yaitu data terstruktur di parse ke method keVsm()
-        kata = keVsm(row[4])
-        #hasil return adalah list maka harus menggunakan fungsi join agar menjadi string , sebernarnya bisa menggunakan variable lain selain kata , tapi karena variable kata tidak digunakan lagi maka masukkan saja ke variable itu 
-        kata = ' '.join(str(x) for x in kata)
-        #fungsi penyimpanan vsm
-        simpanDataVsm(conn , kata ,row[3])
-        print(&quot;. &quot;, end=&quot;&quot;, flush=True)
-    print(&quot;done&quot;)
-</code></pre>
-
-<p>untuk fungsi penyimpanan dan cek field kurang lebih sama dengan penyimpanan dan cek field data terstruktur hanya perlu penyesuaian sedikit</p>
-<h2 id="34-kmean">3.4 kmean</h2>
-<p>step dasar kmean sebagai berikut</p>
-<ol>
-<li>tentukan jumlah clushter</li>
-<li>random pusat clushter sebanyak jumlah clushter</li>
-<li>kemudian cari jarak masing-masing pusat clushter ke setiap anggota  lain</li>
-<li>jarak terdekat adalah  anggota clushter tersebut</li>
-<li>hitung rata-rata seluruh anggota masing-masing clushter , rata-rata tsb adalah pusat clushter baru</li>
-<li>ulangi langkah 3,4,5 sampai tidak ada anggota yang berpindah clushter atau pusat clushter == pusat clushter baru</li>
-</ol>
-<p>jika ditulis dalam code versi saya akan seperti ini</p>
-<pre><code class="python">def kmean(conn,k,url,vsm):
-    #1. k adalah jumlah clushter
-    global centerCluster , clushter , centerDataCluster
-    newClushter=[]
-    iterasi = 0
-    #2.random pusat clushter
-    centerCluster = list(random(k,len(vsm)))
-    print(&quot;centerCluster = &quot;,centerCluster)
-    for x in range(0,k):  
-        centerDataCluster.append(getCenterData(conn,centerCluster[x]))
-    while(True): 
-        iterasi+=1
-
-        for dataKe in vsm:
-            #3. tmp jarak menampung jarak data ke masing masing center
-            tmpJarak=[]
-            jcenter=0
-            for centerKe in centerDataCluster:
-                tmpJarak.append(manhattanDistance(dataKe,centerKe))
-            #4. kemudian diambil jarak terendah
-            cls = tmpJarak.index(min(tmpJarak))
-            newClushter.append(cls+1)
-        # pengecekan apakah ada perubahan anggota clushter
-        if(newClushter == clushter):
-            break
-        else:
-            clushter = newClushter
-            newClushter = []
-
-            print(clushter)
-            NewCenter = []
-            for x in range(1,k+1):          
-                tmp = [0] * len(vsm[0])
-                jumlah = 0
-                for y in clushter:
-                    if(y==x):
-
-                        tmp = aPlusB(tmp,vsm[y]) 
-                        jumlah+=1
-                #5. hitung rata-rata pusat clushter baru
-                NewCenter.append(mean(tmp,jumlah))
-            centerDataCluster = NewCenter
-    return clushter
-</code></pre>
-
-<p>hasil kmean akan seperti berikut</p>
-<p><img alt="1555754273918" src="C:\Users\zainal\AppData\Roaming\Typora\typora-user-images\1555754273918.png" /></p>
-<p>sekian penjelasan saya kurang lebihnya mohon maaf   , terimakasih</p>
-<p>full code ada di repo berikut  :</p></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
-
-    </body>
+</body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-04-20 10:11:58
--->
